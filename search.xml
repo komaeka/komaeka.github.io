@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>MySQL8.0的下载与安装</title>
+      <link href="/2021/08/02/MySQL-download-and-install/"/>
+      <url>/2021/08/02/MySQL-download-and-install/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>MySQL是世界上最流行的开源数据库。</p></blockquote><hr><h1 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h1><ol><li><a href="https://www.mysql.com/downloads/">进入官网的下载页面</a>  </li><li>点击下图的链接<br><img src="https://ss.im5i.com/2021/07/22/ga04O.png" alt="下载">  </li><li>可以选择上边的<strong>Community Server</strong>，那样会下载压缩包，这里我选择下边的<strong>Installer for Windows</strong>，下载的是安装包<br><img src="https://ss.im5i.com/2021/07/22/gazRy.png" alt="下载">  </li><li>点击下方的<strong>Download</strong><br><img src="https://ss.im5i.com/2021/07/22/gaaKR.png" alt="下载">  </li><li>点击下方的 <strong>No thanks, just start my download.</strong> 开始下载<br><img src="https://ss.im5i.com/2021/07/22/g4PF7.png" alt="下载"></li></ol><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><ol><li><p>根据需要选择安装，这里我选择Server only，点击Next</p><blockquote><p>Developer Default：默认，安装所有开发需要的部分<br>Server only：仅安装MySQL数据库服务器<br>Client only：仅安装MySQL数据库客户端<br>Full：完全安装<br>Custom：自定义安装</p></blockquote><p> <img src="https://ss.im5i.com/2021/07/22/ga4jd.png" alt="安装">  </p></li><li><p>点击Execute，等它执行完毕，点击Next<br><img src="https://ss.im5i.com/2021/07/22/gapL4.png" alt="安装"><br><img src="https://ss.im5i.com/2021/07/22/gaMvW.png" alt="安装">  </p></li><li><p>直接点击Next<br><img src="https://ss.im5i.com/2021/07/22/gaOUG.png" alt="安装">  </p></li><li><p> 默认配置即可，直接点击Next<br><img src="https://ss.im5i.com/2021/07/22/gakZz.png" alt="安装">  </p></li><li><p>默认强密码，直接点击Next<br><img src="https://ss.im5i.com/2021/07/22/g4FF5.png" alt="安装">  </p></li><li><p>上方设置root账户密码后点击Add User，添加用户，可以用同一个密码，防止记不住，点击OK后点击Next<br><img src="https://ss.im5i.com/2021/07/22/g4Qy6.png" alt="安装"><br><img src="https://ss.im5i.com/2021/07/22/g4hR8.png" alt="安装">  </p></li><li><p>默认配置即可，直接点击Next<br><img src="https://ss.im5i.com/2021/07/22/g4wpU.png" alt="安装">  </p></li><li><p>点击Execute，等全部打上勾后，点击Finish<br><img src="https://ss.im5i.com/2021/07/22/g4qPw.png" alt="安装"><br><img src="https://ss.im5i.com/2021/07/22/g4vjZ.png" alt="安装">  </p></li><li><p>直接点击Next<br><img src="https://ss.im5i.com/2021/07/22/g46eJ.png" alt="安装">  </p></li><li><p> 直接点击Finish完成安装<br><img src="https://ss.im5i.com/2021/07/22/g4S61.png" alt="安装"></p></li></ol><h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><ol><li>键入WIN+R，输入cmd，点击确定打开命令行<br><img src="https://ss.im5i.com/2021/07/22/g4gUn.png" alt="测试">  </li><li>移动到mysql的bin文件夹下<br><code>cd C:\Program Files\MySQL\MySQL Server 8.0\bin</code>  </li><li>输入<code>mysql -u用户名 -p密码</code>  </li><li>输入<code>select version();</code>查看mysql版本，成功显示版本信息，安装完成<br><img src="https://ss.im5i.com/2021/07/22/g4Gil.png" alt="测试"></li></ol><hr><blockquote><p>本人水平很菜，如果文章有差错，还望指正。</p></blockquote><p><strong>谢谢§ԾᴗԾ§</strong></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 计算机学习心得 </category>
+          
+          <category> 数据库 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> MySQL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>使用pynput同时监听鼠标和键盘</title>
+      <link href="/2021/07/30/use-pynput-monitor-mouse-and-keyboard/"/>
+      <url>/2021/07/30/use-pynput-monitor-mouse-and-keyboard/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>pynput是一个基于python的，能够监听和控制鼠标和键盘的第三方库。</p></blockquote><hr><h1 id="pynput概述"><a href="#pynput概述" class="headerlink" title="pynput概述"></a>pynput概述</h1><p>pynput主要包括两个类，<strong>pynput.mouse</strong>和<strong>pynput.keyboard</strong>，顾名思义，前者可以用来控制和监听鼠标（或者触控板？），后者可以用来控制和监听键盘</p><p><a href="https://pynput.readthedocs.io/en/latest/">pynput官方文档</a></p><h1 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p><code>pip install pynput</code></p><h2 id="导入"><a href="#导入" class="headerlink" title="导入"></a>导入</h2><p><code>from pynput import mouse, keyboard</code></p><h2 id="定义监听函数"><a href="#定义监听函数" class="headerlink" title="定义监听函数"></a>定义监听函数</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 监听鼠标</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">on_click</span>(<span class="params">x, y, button, pressed</span>):</span></span><br><span class="line">    <span class="keyword">if</span> button == mouse.Button.middle <span class="keyword">and</span> pressed:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;middle pressed&quot;</span>)</span><br><span class="line">    <span class="keyword">elif</span> button == mouse.Button.middle <span class="keyword">and</span> (<span class="keyword">not</span> pressed):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;middle not pressed&quot;</span>)</span><br><span class="line"><span class="comment"># 监听键盘</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">on_press</span>(<span class="params">key</span>):</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        <span class="keyword">if</span> key.char <span class="keyword">in</span> [<span class="string">&#x27;1&#x27;</span>,<span class="string">&#x27;2&#x27;</span>,<span class="string">&#x27;3&#x27;</span>]:</span><br><span class="line">        <span class="built_in">print</span>(key.char)</span><br><span class="line">    <span class="keyword">except</span> AttributeError:</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;special key &#123;0&#125; pressed&#x27;</span>.<span class="built_in">format</span>(key))</span><br></pre></td></tr></table></figure><p><strong>注意：定义监听键盘函数时，一定要使用try except捕获AttributeError异常，否则按到诸如ctrl或者shift之类的按键会报错</strong></p><h2 id="监听"><a href="#监听" class="headerlink" title="监听"></a>监听</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 非阻塞方式监听鼠标</span></span><br><span class="line">mouse_listener = mouse.Listener(on_click=on_click)</span><br><span class="line">mouse_listener.start()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 阻塞方式监听键盘</span></span><br><span class="line"><span class="keyword">with</span> keyboard.Listener(on_press=on_press) <span class="keyword">as</span> keyboardListener:</span><br><span class="line">    keyboardListener.join()</span><br></pre></td></tr></table></figure><p><strong>注意：一个要用非阻塞方式，另一个要用阻塞方式才行，如果只监听其中一个，那么需要监听的那个用阻塞方式</strong></p><hr><blockquote><p>本人水平很菜，如果文章有差错，还望指正。</p></blockquote><p><strong>谢谢§ԾᴗԾ§</strong></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 计算机学习心得 </category>
+          
+          <category> 编程语言 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+            <tag> pynput </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
