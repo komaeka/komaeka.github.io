@@ -4,6 +4,48 @@
   
     
     <entry>
+      <title>玩过的Galgame</title>
+      <link href="/2021/08/05/galgame/"/>
+      <url>/2021/08/05/galgame/</url>
+      
+        <content type="html"><![CDATA[<h1 id="日系"><a href="#日系" class="headerlink" title="日系"></a>日系</h1><h2 id="2002年"><a href="#2002年" class="headerlink" title="2002年"></a>2002年</h2><ul><li>沙耶之歌</li></ul><h1 id="国产"><a href="#国产" class="headerlink" title="国产"></a>国产</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> 二次元 </category>
+          
+          <category> galgame </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>看过的动漫</title>
+      <link href="/2021/08/05/animation/"/>
+      <url>/2021/08/05/animation/</url>
+      
+        <content type="html"><![CDATA[<h1 id="日漫"><a href="#日漫" class="headerlink" title="日漫"></a>日漫</h1><h2 id="1999年"><a href="#1999年" class="headerlink" title="1999年"></a>1999年</h2><ul><li>数码宝贝</li></ul><h1 id="国漫"><a href="#国漫" class="headerlink" title="国漫"></a>国漫</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> 二次元 </category>
+          
+          <category> 动漫 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>使用pynput同时监听鼠标和键盘</title>
       <link href="/2021/08/01/use-pynput-monitor-mouse-and-keyboard/"/>
       <url>/2021/08/01/use-pynput-monitor-mouse-and-keyboard/</url>
