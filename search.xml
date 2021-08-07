@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>轻量级Hexo博客搭建指南</title>
+      <link href="/2021/08/07/lightweight-Hexo-blog-setup-guide/"/>
+      <url>/2021/08/07/lightweight-Hexo-blog-setup-guide/</url>
+      
+        <content type="html"><![CDATA[<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><p>这里不多赘述，直接去B站参照up主<strong>CodeSheep</strong>的视频操作就行，学习到部署到GitHub即可。<br>链接：<a href="https://www.bilibili.com/video/BV1Yb411a7ty?share_source=copy_web">https://www.bilibili.com/video/BV1Yb411a7ty?share_source=copy_web</a></p><h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><h2 id="Hexo基本配置"><a href="#Hexo基本配置" class="headerlink" title="Hexo基本配置"></a>Hexo基本配置</h2><div class="note warning modern"><p>建议做一部分就运行一下<code>hexo s</code>来查看效果，检查是否有报错。</p></div><p>打开博客根目录文件夹下的**_config.yml<strong>配置好</strong>title、subtitle、author、language、timezone、url**即可。</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Site</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">东方迷津筑</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="string">幻想乡一角</span></span><br><span class="line"><span class="attr">description:</span></span><br><span class="line"><span class="attr">keywords:</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">狛枫</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-CN</span></span><br><span class="line"><span class="attr">timezone:</span> <span class="string">Asia/Shanghai</span></span><br><span class="line"><span class="comment"># URL</span></span><br><span class="line"><span class="comment"># 如果你是用GitHub Page，那么这里写https://username.github.io</span></span><br><span class="line"><span class="attr">url:</span> <span class="string">https://komaeka.fun</span></span><br></pre></td></tr></table></figure><h2 id="Butterfly主题配置"><a href="#Butterfly主题配置" class="headerlink" title="Butterfly主题配置"></a>Butterfly主题配置</h2><blockquote><p>由于本文属于<strong>轻量级</strong>指南，没提到的部分就是默认配置，如果有兴趣也可以自己钻研。</p></blockquote><ol><li><p>进入<a href="https://butterfly.js.org/posts/21cfbf15/">Butterfly 安裝文檔(一) 快速開始 | Butterfly</a>学习<strong>安装、应用主题、安装插件、升级建议</strong>。</p></li><li><p>进入<a href="https://butterfly.js.org/posts/dc584b87/#Post-Front-matter">Butterfly 安裝文檔(二) 主題頁面 | Butterfly</a>学习<strong>Front-matter、标签页、分类页、友情链接、图库、404页面</strong>。</p><ol><li>有些萌新不知道Front-matter是什么，我简单介绍一下。因为Hexo博客的页面主要由source文件夹里边的Markdown文件渲染而来，而Front-matter就能在这个Markdown文件里边进行一些设置，比如文章标题、标签、分类、发布时间等等。</li><li>标签页、分类页和友情链接页面除了添加type还可以把<strong>top_img</strong>加上，这样就有顶部图了。</li><li>图库标签采用的是相对地址，比如<code>/Gallery/wallpaper</code>指的是<code>博客根目录/source/Gallery/wallpaper</code>。</li></ol></li><li><p>进入<a href="https://butterfly.js.org/posts/4aa8abbe/">Butterfly 安裝文檔(三) 主題配置-1 | Butterfly</a>学习<strong>导航菜单、社交图标、主页文章节选、顶部图、文章页相关配置、头像、Footer 设置、右下角按钮、侧边栏设置、标签外挂</strong>。</p><ol start="2"><li>顶部图配置<strong>index_img、archive_img、tag_img、category_img</strong>即可，其他部分后续有需要再考虑修改。</li><li>如果你想用GitHub徽标，Footer设置部分可以把<strong>copyright</strong>改为false，后面可以用插件设置GitHub Badge。</li><li>标签外挂要熟悉，写文章的时候使用起来效果会很好。</li></ol></li><li><p>进入<a href="https://butterfly.js.org/posts/ceeb73f/">Butterfly 安裝文檔(四) 主題配置-2 | Butterfly</a>学习<strong>评论、在线聊天、搜索系统、美化/特效、字数统计</strong>。</p><ol><li><p>关于评论系统，我看一些大佬喜欢用<strong>Twikoo</strong>，我就也跟着用Twikoo。我找到了一篇大佬的配置教程，写得十分详细，亲测可用：<a href="https://blog.zhheo.com/p/2e6bbbd0.html">Twikoo评论系统配置教程</a>。</p></li><li><p>在线聊天其实可以不用添加，不过添加了真的很酷就是了，我用的是Tidio，效果如图：</p><p><img src="https://ss.im5i.com/2021/08/07/PEBRd.png" alt="Tidio"></p><p>添加了之后记得在_config.butterfly.yml改<strong>rightside-bottom</strong>，不然聊天窗口会挡住侧边设置栏目，我改为了<strong>130px</strong>。</p></li><li><p>搜索系统我用的是本地搜索，打开之后右上角的导航栏最左边就会自动出现一个放大镜的标志，那就是搜索。</p></li><li><p>美化/特效部分，我把footer背景改为了true，打开了beautify，改了字体为Microsoft YaHei，将字体大小调为了16px，添加了网站副标题，打开了页面加载动画。</p></li></ol></li><li><p><a href="https://www.npmjs.com/package/hexo-butterfly-footer-beautify">在页底添加GitHub Badge</a>，效果演示：</p><p><img src="https://ss.im5i.com/2021/08/07/PEJ44.png" alt="GitHub Badge"></p></li><li><p>至此，你的Hexo博客基本上已经搭建完毕，如果你还想继续美化或者提高访问性能等，去<a href="https://akilar.top/">Akilarの糖果屋</a>，那里会有你想要的！</p></li></ol><h1 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h1><h2 id="教程链接"><a href="#教程链接" class="headerlink" title="教程链接"></a>教程链接</h2><ul><li><a href="https://hexo.io/zh-cn/">Hexo官网</a></li><li><a href="https://butterfly.js.org/">Butterfly官网</a></li><li><a href="https://akilar.top/">Akilarの糖果屋</a>（里边有很多魔改和美化教程哦！）</li></ul><h2 id="工具资源"><a href="#工具资源" class="headerlink" title="工具资源"></a>工具资源</h2><ul><li><a href="https://en.gravatar.com/">Gravatar头像</a></li><li><a href="https://cloud.tencent.com/">腾讯云</a></li><li><a href="https://www.tidio.com/">Tidio</a></li><li><a href="https://fontawesome.com/">Font Awesome</a></li></ul><h2 id="涉及的插件"><a href="#涉及的插件" class="headerlink" title="涉及的插件"></a>涉及的插件</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save # 部署插件</span><br><span class="line">npm install hexo-renderer-pug hexo-renderer-stylus --save # 渲染器插件</span><br><span class="line">npm install hexo-generator-search --save # 本地搜索插件</span><br><span class="line">npm install hexo-wordcount --save # 字数统计插件</span><br><span class="line">npm install hexo-butterfly-footer-beautify --save #页底GitHub徽标插件</span><br></pre></td></tr></table></figure><hr><blockquote><p>本人水平很菜，如果文章有差错，还望指正。</p></blockquote><p><strong>谢谢§ԾᴗԾ§</strong></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 计算机学习心得 </category>
+          
+          <category> 博客搭建 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> Butterfly </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>《苍之彼方的四重奏》——将爱与梦想寄托于这苍之彼方</title>
       <link href="/2021/08/06/aokana/"/>
       <url>/2021/08/06/aokana/</url>
@@ -33,6 +62,8 @@
             <tag> 恋爱 </tag>
             
             <tag> 青春 </tag>
+            
+            <tag> 治愈 </tag>
             
         </tags>
       
