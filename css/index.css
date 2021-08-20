@@ -1464,6 +1464,13 @@ a {
 a:hover {
   color: #49b1f5;
 }
+#site-title,
+#site-subtitle,
+#site-name,
+#aside-content .author-info__name,
+#aside-content .author-info__description {
+  font-family: ZCOOL KuaiLe;
+}
 .is-center {
   text-align: center;
 }
@@ -1825,6 +1832,33 @@ blockquote footer cite:before {
 #article-container .gist table td {
   border: none;
 }
+#article-container .code-expand-btn {
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+  width: 100%;
+  background: var(--hlexpand-bg);
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+#article-container .code-expand-btn i {
+  padding: 0.3rem 0;
+  color: var(--hlnumber-color);
+  -webkit-animation: code-expand-key 1.2s infinite;
+  -moz-animation: code-expand-key 1.2s infinite;
+  -o-animation: code-expand-key 1.2s infinite;
+  -ms-animation: code-expand-key 1.2s infinite;
+  animation: code-expand-key 1.2s infinite;
+}
+#article-container .code-expand-btn.expand-done {
+  display: none !important;
+}
+#article-container .code-expand-btn:not(.expand-done) ~ table,
+#article-container .code-expand-btn:not(.expand-done) ~ pre {
+  overflow: hidden;
+  height: 400px;
+}
 @-moz-keyframes code-expand-key {
   0% {
     opacity: 0.6;
@@ -2002,6 +2036,7 @@ blockquote footer cite:before {
   padding: 0.5rem;
   text-align: center;
   font-size: 14px;
+  font-family: ZCOOL KuaiLe;
 }
 @media screen and (max-width: 768px) {
   .error404 #error-wrap .error-content .error-info {
