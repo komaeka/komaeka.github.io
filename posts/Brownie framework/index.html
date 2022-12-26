@@ -7,7 +7,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://blog-1306747292.cos.ap-chongqing.myqcloud.com/cover/Brownie%E6%A1%86%E6%9E%B6.jpg">
 <meta property="article:published_time" content="2022-11-24T15:43:44.000Z">
-<meta property="article:modified_time" content="2022-12-24T16:33:25.683Z">
+<meta property="article:modified_time" content="2022-12-25T11:22:18.988Z">
 <meta property="article:author" content="狛枫">
 <meta property="article:tag" content="区块链">
 <meta property="article:tag" content="以太坊">
@@ -57,7 +57,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: true,
-  postUpdate: '2022-12-25 00:33:25'
+  postUpdate: '2022-12-25 19:22:18'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -265,7 +265,7 @@
 <p>Brownie为etherscan支持的所有网络上的solidity合约提供自动源代码验证功能。要在部署时验证合约，请添加<code>publish_source=True</code>参数，如：<code>Token.deploy(&quot;My Real Token&quot;, &quot;RLT&quot;, 18, 1e28, &#123;'from': acct&#125;, publish_source=True)</code></p>
 <h1 id="交互">交互</h1>
 <p>Brownie支持对已经部署的合约进行交互，交互手段分为控制台交互和脚本交互</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">进入控制台交互模式</span></span><br><span class="line">brownie console</span><br><span class="line">brownie console --network goerli</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">退出控制台交互模式</span></span><br><span class="line">exit()</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">部署合约</span></span><br><span class="line">contract = contract_name.deploy(&#123;&quot;from&quot;: account&#125;)</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">获取已经部署的合约</span></span><br><span class="line">contract = Contract(contract_address)</span><br><span class="line">contract = contract_name.at(contract_address)</span><br><span class="line">contract = Contract.from_abi(contract_name, contract_address, contract_abi)</span><br><span class="line">contract = Contract.from_explorer(contract_address)</span><br><span class="line">contract = contract_name[-1]</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">随消息发送ETH</span></span><br><span class="line">contract.contract_function(&#123;&quot;from&quot;: account, &quot;value&quot;: value&#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">进入控制台交互模式</span></span><br><span class="line">brownie console</span><br><span class="line">brownie console --network goerli</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">退出控制台交互模式</span></span><br><span class="line">exit()</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">部署合约</span></span><br><span class="line">contract = contract_name.deploy(&#123;&quot;from&quot;: account&#125;)</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">获取已经部署的合约</span></span><br><span class="line">contract = Contract(contract_address)</span><br><span class="line">contract = Contract.from_explorer(contract_address)</span><br><span class="line">contract = Contract.from_abi(contract_name, contract_address, contract_abi)</span><br><span class="line">contract = contract_name.at(contract_address)</span><br><span class="line">contract = contract_name[-1]</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">随消息发送ETH</span></span><br><span class="line">contract.contract_function(&#123;&quot;from&quot;: account, &quot;value&quot;: value&#125;)</span><br></pre></td></tr></table></figure>
 <h1 id="网络">网络</h1>
 <ul>
 <li>Brownie可用于开发和实时环境
