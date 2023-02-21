@@ -7,7 +7,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://blog-1306747292.cos.ap-chongqing.myqcloud.com/cover/Mint%E8%B0%83%E6%95%99%E6%97%A5%E8%AE%B0.jpg">
 <meta property="article:published_time" content="2023-01-17T10:28:10.000Z">
-<meta property="article:modified_time" content="2023-02-15T03:18:31.289Z">
+<meta property="article:modified_time" content="2023-02-21T10:04:33.301Z">
 <meta property="article:author" content="狛枫">
 <meta property="article:tag" content="操作系统">
 <meta property="article:tag" content="Linux">
@@ -55,7 +55,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: true,
-  postUpdate: '2023-02-15 11:18:31'
+  postUpdate: '2023-02-21 18:04:33'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -157,6 +157,15 @@
 <li>在最后一行添加挂载：<code>/dev/nvme0n1p2 /mnt/windowsdisk1/</code></li>
 </ol>
 </li>
+<li>git相关
+<ul>
+<li>设置全局name和email</li>
+<li>设置git默认main分支：<code>git config --global init.defaultBranch main</code></li>
+<li>git不显示中文：<code>git config --global core.quotepath false</code></li>
+<li>SSH连不上，打开~/.ssh/config，添加如下内容<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">Hostname ssh.github.com</span><br><span class="line">Port 443</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
 </ul>
 <h1 id="软件安装">软件安装</h1>
 <ul>
@@ -166,33 +175,18 @@
 <li>安装edge
 <ol>
 <li><code>sudo dpkg -i ***</code></li>
-<li><code>sudo apt-get -f install </code></li>
+<li><code>sudo apt -f install</code></li>
 </ol>
 </li>
 </ul>
 </li>
-<li>安装grub-customizer设置开机启动项<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:danielrichter2007/grub-customizer</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install grub-customizer</span><br></pre></td></tr></table></figure>
+<li>安装grub-customizer设置开机启动项<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:danielrichter2007/grub-customizer</span><br><span class="line">sudo apt update</span><br><span class="line">sudo apt install grub-customizer</span><br></pre></td></tr></table></figure>
 </li>
 <li>安装字体：Comic Sans MS，Microsoft YaHei，Monaco</li>
 <li>安装nodejs
 <ol>
 <li>下载并解压</li>
 <li>将bin文件夹添加到环境变量，打开~/.bashrc，写入以下内容<code>export PATH=$PATH:/home/komaeka/application/nodejs/bin</code></li>
-</ol>
-</li>
-<li>安装输入法
-<ol>
-<li>安装依赖：<code>sudo apt install fcitx5*</code></li>
-<li>在home目录新建.xprofile，写入以下内容</li>
-</ol>
-  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">export GTK_IM_MODULE=fcitx5</span><br><span class="line">export QT_IM_MODULE=fcitx5</span><br><span class="line">export XMODIFIERS=&quot;@im=fcitx5&quot;</span><br><span class="line">export LANG=&quot;zh_CN.UTF-8&quot;</span><br><span class="line">export LC_CTYPE=&quot;zh_CN.UTF-8&quot;</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>将clover.schema-build-*.zip里面的文件解压到~/.local/share/fcitx5/rime</li>
-<li>在~/.local/share/fcitx5/rime新建default.custom.yaml，内容如下：</li>
-</ol>
-  <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">patch:</span></span><br><span class="line"><span class="attr">&quot;menu/page_size&quot;:</span> <span class="number">6</span></span><br><span class="line"><span class="attr">schema_list:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">schema:</span> <span class="string">clover</span></span><br></pre></td></tr></table></figure>
-<ol start="5">
-<li>进入Fcitx配置，附加组件-经典用户界面，调整字体字号</li>
 </ol>
 </li>
 </ul>
