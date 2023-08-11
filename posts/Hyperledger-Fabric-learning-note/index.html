@@ -7,12 +7,11 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://blog-1306747292.cos.ap-chongqing.myqcloud.com/cover/Hyperledger%20Fabirc%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.jpg">
 <meta property="article:published_time" content="2023-07-09T03:33:13.000Z">
-<meta property="article:modified_time" content="2023-07-17T15:36:33.819Z">
+<meta property="article:modified_time" content="2023-08-10T06:00:48.382Z">
 <meta property="article:author" content="狛枫">
 <meta property="article:tag" content="区块链">
 <meta property="article:tag" content="智能合约">
 <meta property="article:tag" content="Hyperledger Fabirc">
-<meta property="article:tag" content="Go">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://blog-1306747292.cos.ap-chongqing.myqcloud.com/cover/Hyperledger%20Fabirc%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.jpg"><link rel="shortcut icon" href="/image/favicon.jpg"><link rel="canonical" href="https://www.komaeka.fun/posts/Hyperledger-Fabric-learning-note/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&amp;display=swap" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
   root: '/',
@@ -56,7 +55,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: true,
-  postUpdate: '2023-07-17 23:36:33'
+  postUpdate: '2023-08-10 14:00:48'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -136,78 +135,252 @@
       }
     }
     detectApple()
-    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/image/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">21</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">32</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa-solid fa-torii-gate"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-feather-alt"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-th"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tag"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-th-list"></i><span> 记录</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/animation/"><i class="fa-fw fas fa-play-circle"></i><span> 动漫</span></a></li><li><a class="site-page child" href="/galgame/"><i class="fa-fw fas fa-gamepad"></i><span> Galgame</span></a></li><li><a class="site-page child" href="/book/"><i class="fa-fw fas fa-book"></i><span> 书单</span></a></li><li><a class="site-page child" href="/essay/"><i class="fa-fw fas fa-lightbulb"></i><span> 随笔</span></a></li><li><a class="site-page child" href="/excerpt/"><i class="fa-fw fas fa-bookmark"></i><span> 摘抄</span></a></li><li><a class="site-page child" href="/zhonger/"><i class="fa-fw fa-solid fa-capsules"></i><span> 中二病</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/gallery/"><i class="fa-fw fas fa-palette"></i><span> 画册</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-star-of-david"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://blog-1306747292.cos.ap-chongqing.myqcloud.com/cover/Hyperledger Fabirc学习笔记.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">东方迷津筑</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa-solid fa-torii-gate"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-feather-alt"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-th"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tag"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-th-list"></i><span> 记录</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/animation/"><i class="fa-fw fas fa-play-circle"></i><span> 动漫</span></a></li><li><a class="site-page child" href="/galgame/"><i class="fa-fw fas fa-gamepad"></i><span> Galgame</span></a></li><li><a class="site-page child" href="/book/"><i class="fa-fw fas fa-book"></i><span> 书单</span></a></li><li><a class="site-page child" href="/essay/"><i class="fa-fw fas fa-lightbulb"></i><span> 随笔</span></a></li><li><a class="site-page child" href="/excerpt/"><i class="fa-fw fas fa-bookmark"></i><span> 摘抄</span></a></li><li><a class="site-page child" href="/zhonger/"><i class="fa-fw fa-solid fa-capsules"></i><span> 中二病</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/gallery/"><i class="fa-fw fas fa-palette"></i><span> 画册</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-star-of-david"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Hyperledger Fabirc学习笔记</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2023-07-09T03:33:13.000Z" title="发表于 2023-07-09 11:33:13">2023-07-09</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/">计算机学习心得</a></span></div><div class="meta-secondline"></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="安装">安装</h1>
-<h1 id="启动网络">启动网络</h1>
-<h1 id="部署智能合约（链码）">部署智能合约（链码）</h1>
-<h2 id="设置监控智能合约的日志（可选操作）">设置监控智能合约的日志（可选操作）</h2>
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/image/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">21</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">31</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa-solid fa-torii-gate"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-feather-alt"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-th"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tag"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-th-list"></i><span> 记录</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/animation/"><i class="fa-fw fas fa-play-circle"></i><span> 动漫</span></a></li><li><a class="site-page child" href="/galgame/"><i class="fa-fw fas fa-gamepad"></i><span> Galgame</span></a></li><li><a class="site-page child" href="/book/"><i class="fa-fw fas fa-book"></i><span> 书单</span></a></li><li><a class="site-page child" href="/essay/"><i class="fa-fw fas fa-lightbulb"></i><span> 随笔</span></a></li><li><a class="site-page child" href="/excerpt/"><i class="fa-fw fas fa-bookmark"></i><span> 摘抄</span></a></li><li><a class="site-page child" href="/zhonger/"><i class="fa-fw fa-solid fa-capsules"></i><span> 中二病</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/gallery/"><i class="fa-fw fas fa-palette"></i><span> 画册</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-star-of-david"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://blog-1306747292.cos.ap-chongqing.myqcloud.com/cover/Hyperledger Fabirc学习笔记.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">东方迷津筑</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa-solid fa-torii-gate"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-feather-alt"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-th"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tag"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-th-list"></i><span> 记录</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/animation/"><i class="fa-fw fas fa-play-circle"></i><span> 动漫</span></a></li><li><a class="site-page child" href="/galgame/"><i class="fa-fw fas fa-gamepad"></i><span> Galgame</span></a></li><li><a class="site-page child" href="/book/"><i class="fa-fw fas fa-book"></i><span> 书单</span></a></li><li><a class="site-page child" href="/essay/"><i class="fa-fw fas fa-lightbulb"></i><span> 随笔</span></a></li><li><a class="site-page child" href="/excerpt/"><i class="fa-fw fas fa-bookmark"></i><span> 摘抄</span></a></li><li><a class="site-page child" href="/zhonger/"><i class="fa-fw fa-solid fa-capsules"></i><span> 中二病</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/gallery/"><i class="fa-fw fas fa-palette"></i><span> 画册</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-star-of-david"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Hyperledger Fabirc学习笔记</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2023-07-09T03:33:13.000Z" title="发表于 2023-07-09 11:33:13">2023-07-09</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/">计算机学习心得</a></span></div><div class="meta-secondline"></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><blockquote>
+<p>本文先介绍fabric-samples的安装和使用，然后从官方文档中摘录重要知识</p>
+</blockquote>
+<h1 id="fabric-samples的安装和使用">fabric-samples的安装和使用</h1>
+<h2 id="安装fabric-samples">安装fabric-samples</h2>
 <ol>
-<li>启动网络并创建通道：进入test-network目录，运行<code>./network.sh up createChannel</code></li>
-<li>运行<code>./monitordocker.sh</code>，此时会额外启动一个名为logspout的容器</li>
-</ol>
-<h2 id="准备工作">准备工作</h2>
-<ul>
-<li>命令执行目录默认为fabric-samples</li>
-<li>要想使用peer CLI，需要三个前提：
-<ul>
-<li>网络已经启动</li>
-<li>设置FABRIC_CFG_PATH环境变量，指向fabric-samples中的core.yaml文件：<code>export FABRIC_CFG_PATH=$PWD/config/</code></li>
-<li>设置peer节点的环境变量，这将决定以谁的身份操作peer CLI<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">以Org1管理员用户身份操作peer CLI</span></span><br><span class="line">export CORE_PEER_TLS_ENABLED=true</span><br><span class="line">export CORE_PEER_LOCALMSPID=&quot;Org1MSP&quot;</span><br><span class="line">export CORE_PEER_TLS_ROOTCERT_FILE=$PWD/test-network/organizations/peerOrganizations/org1.example.com/tlsca/tlsca.org1.example.com-cert.pem</span><br><span class="line">export CORE_PEER_MSPCONFIGPATH=$PWD/test-network/organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp</span><br><span class="line">export CORE_PEER_ADDRESS=localhost:7051</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">以Org2管理员用户身份操作peer CLI</span></span><br><span class="line">export CORE_PEER_TLS_ENABLED=true</span><br><span class="line">export CORE_PEER_LOCALMSPID=&quot;Org2MSP&quot;</span><br><span class="line">export CORE_PEER_TLS_ROOTCERT_FILE=$PWD/test-network/organizations/peerOrganizations/org2.example.com/tlsca/tlsca.org2.example.com-cert.pem</span><br><span class="line">export CORE_PEER_MSPCONFIGPATH=$PWD/test-network/organizations/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp</span><br><span class="line">export CORE_PEER_ADDRESS=localhost:9051</span><br></pre></td></tr></table></figure>
+<li>安装Git、cURL、Go、JQ</li>
+<li>安装Docker Desktop，并将用户添加到docker组：<code>sudo usermod -a -G docker &lt;username&gt;</code></li>
+<li>进入Go语言的工作目录，获取安装脚本并执行安装脚本 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p $HOME/go/src/github.com/&lt;your_github_userid&gt;</span><br><span class="line">cd $HOME/go/src/github.com/&lt;your_github_userid&gt;</span><br><span class="line">curl -sSLO https://raw.githubusercontent.com/hyperledger/fabric/main/scripts/install-fabric.sh &amp;&amp; chmod +x install-fabric.sh</span><br><span class="line">./install-fabric.sh</span><br></pre></td></tr></table></figure>
 </li>
-</ul>
+<li>将fabric-samples/bin目录加入环境变量</li>
+</ol>
+<h2 id="运行fabric测试网络">运行fabric测试网络</h2>
+<h3 id="启动网络">启动网络</h3>
+<ol>
+<li>进入测试网络目录，即fabric-samples/test-network</li>
+<li>给予network.sh执行权限：<code>chmod +x network.sh</code></li>
+<li>启动fabric网络：<code>./network.sh up</code></li>
+</ol>
+<h3 id="部署链码">部署链码</h3>
+<ol>
+<li>创建通道：<code>./network.sh createChannel</code></li>
+<li>使用logspout工具监控智能合约的日志：<code>./monitordocker.sh</code>，此时会启动一个名为logspout的容器</li>
+<li>在通道上启动链码：<code>./network.sh deployCC -ccn basic -ccp ../asset-transfer-basic/chaincode-go -ccl go</code></li>
+</ol>
+<h3 id="调用链码">调用链码</h3>
+<ol>
+<li>设置FABRIC_CFG_PATH指向fabric-samples/config中的core.yaml文件：<code>export FABRIC_CFG_PATH=$PWD/../config/</code></li>
+<li>要使用peer CLI，需要设置peer节点的环境变量，这将决定以谁的身份操作peer CLI <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">启用TLS</span></span><br><span class="line">export CORE_PEER_TLS_ENABLED=true</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">以Org1管理员用户身份操作peer CLI</span></span><br><span class="line">export CORE_PEER_LOCALMSPID=&quot;Org1MSP&quot;</span><br><span class="line">export CORE_PEER_TLS_ROOTCERT_FILE=$PWD/organizations/peerOrganizations/org1.example.com/tlsca/tlsca.org1.example.com-cert.pem</span><br><span class="line">export CORE_PEER_MSPCONFIGPATH=$PWD/organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp</span><br><span class="line">export CORE_PEER_ADDRESS=localhost:7051</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">以Org2管理员用户身份操作peer CLI</span></span><br><span class="line">export CORE_PEER_LOCALMSPID=&quot;Org2MSP&quot;</span><br><span class="line">export CORE_PEER_TLS_ROOTCERT_FILE=$PWD/organizations/peerOrganizations/org2.example.com/tlsca/tlsca.org2.example.com-cert.pem</span><br><span class="line">export CORE_PEER_MSPCONFIGPATH=$PWD/organizations/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp</span><br><span class="line">export CORE_PEER_ADDRESS=localhost:9051</span><br></pre></td></tr></table></figure>
 </li>
-</ul>
-<h2 id="打包智能合约">打包智能合约</h2>
-<blockquote>
-<p>针对Go,Java,JavaScript,Typescript不同语言所编写的智能合约，步骤会有所不同，此处仅记录使用Go语言编写的智能合约的打包步骤</p>
-</blockquote>
-<ol>
-<li>进入fabric-samples/asset-transfer-basic/chaincode-go，运行<code>GO111MODULE=on go mod vendor</code></li>
-<li>使用peer CLI创建链码包：<code>peer lifecycle chaincode package basic.tar.gz --path asset-transfer-basic/chaincode-go/ --lang golang --label basic_1.0</code></li>
+<li>切换到以Org1管理员用户身份操作peer CLI</li>
+<li>创建一组初始资产：<code>peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls --cafile &quot;$&#123;PWD&#125;/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem&quot; -C mychannel -n basic --peerAddresses localhost:7051 --tlsRootCertFiles &quot;$&#123;PWD&#125;/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt&quot; --peerAddresses localhost:9051 --tlsRootCertFiles &quot;$&#123;PWD&#125;/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt&quot; -c '&#123;&quot;function&quot;:&quot;InitLedger&quot;,&quot;Args&quot;:[]&#125;'</code></li>
+<li>获取资产列表：<code>peer chaincode query -C mychannel -n basic -c '&#123;&quot;Args&quot;:[&quot;GetAllAssets&quot;]&#125;'</code></li>
+<li>调用资产转移链码来更改资产的所有者：<code>peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls --cafile &quot;$&#123;PWD&#125;/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem&quot; -C mychannel -n basic --peerAddresses localhost:7051 --tlsRootCertFiles &quot;$&#123;PWD&#125;/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt&quot; --peerAddresses localhost:9051 --tlsRootCertFiles &quot;$&#123;PWD&#125;/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt&quot; -c '&#123;&quot;function&quot;:&quot;TransferAsset&quot;,&quot;Args&quot;:[&quot;asset6&quot;,&quot;Christopher&quot;]&#125;'</code></li>
+<li>切换到以Org2管理员用户身份操作peer CLI</li>
+<li>查询转移后的资产：<code>peer chaincode query -C mychannel -n basic -c '&#123;&quot;Args&quot;:[&quot;ReadAsset&quot;,&quot;asset6&quot;]&#125;'</code></li>
 </ol>
-<h2 id="安装链码包">安装链码包</h2>
-<blockquote>
-<p>由于将背书策略设置为要求Org1和Org2都背书，所以需要在两个组织peer节点上安装链码</p>
-</blockquote>
-<p>设置环境变量，分别以Org1/Org2管理员用户身份操作peer CLI安装链码包：<code>peer lifecycle chaincode install basic.tar.gz</code></p>
-<h2 id="批准链码定义">批准链码定义</h2>
-<blockquote>
-<p>安装链码包后，需要批准组织的链码定义。该定义包括链码治理的重要参数，例如名称、版本和链码背书策略</p>
-</blockquote>
-<ol>
-<li>使用peer CLI查询PackageID（PackageID是链码标签和链码二进制文件的哈希值的组合。每个peer节点都会生成相同的包PackageID）：<code>peer lifecycle chaincode queryinstalled</code></li>
-<li>将PackageID保存为环境变量：<code>export CC_PACKAGE_ID=basic_1.0:e4de097efb5be42d96aebc4bde18eea848aad0f5453453ba2aad97f2e41e0d57</code></li>
-<li>设置环境变量，分别以Org1/Org2管理员用户身份操作peer CLI批准链码定义：<code>peer lifecycle chaincode approveformyorg -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --channelID mychannel --name basic --version 1.0 --package-id $CC_PACKAGE_ID --sequence 1 --tls --cafile &quot;$&#123;PWD&#125;/test-network/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem&quot;</code></li>
-</ol>
-<h2 id="将链码定义提交到通道">将链码定义提交到通道</h2>
-<blockquote>
-<p>当足够数量的组织批准链码定义后，一个组织可以将链码定义提交到通道。如果大多数通道成员批准了该定义，则提交交易将成功，并且链码定义中商定的参数将在通道上实现</p>
-</blockquote>
-<ol>
-<li>使用peer CLI检查通道成员是否批准了相同的链码定义，该命令将生成一个JSON映射，显示频道成员是否批准了checkcommitreadiness命令中指定的参数：<code>peer lifecycle chaincode checkcommitreadiness --channelID mychannel --name basic --version 1.0 --sequence 1 --tls --cafile &quot;$&#123;PWD&#125;/test-network/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem&quot; --output json</code></li>
-<li>由组织管理员使用peer CLI将链码定义提交到通道：<code>peer lifecycle chaincode commit -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --channelID mychannel --name basic --version 1.0 --sequence 1 --tls --cafile &quot;$&#123;PWD&#125;/test-network/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem&quot; --peerAddresses localhost:7051 --tlsRootCertFiles &quot;$&#123;PWD&#125;/test-network/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt&quot; --peerAddresses localhost:9051 --tlsRootCertFiles &quot;$&#123;PWD&#125;/test-network/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt&quot;</code></li>
-<li>使用peer CLI确认链码定义是否已提交到通道，如果链码成功提交到通道，将返回链码定义的序列和版本：<code>peer lifecycle chaincode querycommitted --channelID mychannel --name basic</code></li>
-</ol>
-<h1 id="调用链码">调用链码</h1>
-<h2 id="使用peer-CLI调用链码">使用peer CLI调用链码</h2>
+<h1 id="简介">简介</h1>
 <ul>
-<li>在账本上创建一组初始资产：<code>peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls --cafile &quot;$&#123;PWD&#125;/test-network/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem&quot; -C mychannel -n basic --peerAddresses localhost:7051 --tlsRootCertFiles &quot;$&#123;PWD&#125;/test-network/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt&quot; --peerAddresses localhost:9051 --tlsRootCertFiles &quot;$&#123;PWD&#125;/test-network/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt&quot; -c '&#123;&quot;function&quot;:&quot;InitLedger&quot;,&quot;Args&quot;:[]&#125;'</code></li>
-<li>使用查询函数来读取由链码创建的汽车集：<code>peer chaincode query -C mychannel -n basic -c '&#123;&quot;Args&quot;:[&quot;GetAllAssets&quot;]&#125;'</code></li>
-</ul>
-<h2 id="使用Fabric-Gateway客户端API构建的示例程序来调用链码">使用Fabric Gateway客户端API构建的示例程序来调用链码</h2>
-<h3 id="简介">简介</h3>
-<blockquote>
-<p>在此示例中，将使用TypeScript智能合约</p>
-</blockquote>
+<li>
+<p>Fabric由以下模块化的组件组成：</p>
 <ul>
-<li>资产转移示例演示了如何创建、更新和查询资产。它涉及以下两个组成部分：
-<ul>
-<li>Sample application：调用区块链网络中智能合约的应用程序，位于fabric-samples/asset-transfer-basic/application-gateway-(go/java/typescript)目录中</li>
-<li>Smart contract：智能合约，位于fabric-samples/asset-transfer-basic/chaincode-(go/java/javascript/typescript)目录中</li>
+<li>可插拔的排序服务对交易顺序建立共识，然后向节点广播区块</li>
+<li>可插拔的成员服务提供者负责将网络中的实体与加密身份相关联</li>
+<li>可选的P2Pgossip服务通过排序服务将区块发送到其他节点</li>
+<li>智能合约（“链码”）隔离运行在容器环境（例如Docker）中。它们可以用标准编程语言编写，但不能直接访问账本状态</li>
+<li>账本可以通过配置支持多种数据库管理系统</li>
+<li>可插拔的背书和验证策*略，每个应用程序可以独立配置</li>
 </ul>
 </li>
-</ul>
-<h1 id="一些猜想">一些猜想</h1>
+<li>
+<p>许可和非许可区块链</p>
 <ul>
-<li>在面对填写peer节点的tlsRootCertFiles，即环境变量CORE_PEER_TLS_ROOTCERT_FILE的时候，fabric-samples中的shell脚本会使用organizations/peerOrganizations/org1.example.com/tlsca/tlsca.org1.example.com-cert.pem，而官方文档中则使用organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt。第一个是组织级别的，第二个则是针对组织下属的节点级别的，在两个都能用的情况下，我有理由怀疑用组织级别的TLS证书能够概括该组织下属的所有节点</li>
+<li>对于许可区块链来说，完全拜占庭容错的共识可能是不必要的，并且大大降低了性能和吞吐量。许可区块链可以使用更传统的崩溃容错（CFT）或拜占庭容错（BFT）共识协议。</li>
+<li>非许可区块链通常采用“挖矿”或交易费来提供经济激励，以抵消参与基于“工作量证明（PoW）”的拜占庭容错共识形式的特殊成本。</li>
 </ul>
-</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://www.komaeka.fun">狛枫</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://www.komaeka.fun/posts/Hyperledger-Fabric-learning-note/">https://www.komaeka.fun/posts/Hyperledger-Fabric-learning-note/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://www.komaeka.fun" target="_blank">东方迷津筑</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/">区块链</a><a class="post-meta__tags" href="/tags/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6/">智能合约</a><a class="post-meta__tags" href="/tags/Hyperledger-Fabirc/">Hyperledger Fabirc</a><a class="post-meta__tags" href="/tags/Go/">Go</a></div><div class="post_share"></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/image/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">狛枫</div><div class="author-info__description">中二病永不毕业！</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">21</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">32</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://space.bilibili.com/23506251"><i></i><span>哔哩哔哩 (゜-゜)つロ 干杯~</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="mailto:komaeka@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://github.com/komaeka" target="_blank" title="GitHub"><i class="fab fa-github"></i></a><a class="social-icon" href="https://www.cnblogs.com/komaeka" target="_blank" title="博客园"><i class="fas fa-blog"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content is-expand"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-number">1.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%E7%BD%91%E7%BB%9C"><span class="toc-number">2.</span> <span class="toc-text">启动网络</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%EF%BC%88%E9%93%BE%E7%A0%81%EF%BC%89"><span class="toc-number">3.</span> <span class="toc-text">部署智能合约（链码）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E7%9B%91%E6%8E%A7%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E7%9A%84%E6%97%A5%E5%BF%97%EF%BC%88%E5%8F%AF%E9%80%89%E6%93%8D%E4%BD%9C%EF%BC%89"><span class="toc-number">3.1.</span> <span class="toc-text">设置监控智能合约的日志（可选操作）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="toc-number">3.2.</span> <span class="toc-text">准备工作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%93%E5%8C%85%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6"><span class="toc-number">3.3.</span> <span class="toc-text">打包智能合约</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E9%93%BE%E7%A0%81%E5%8C%85"><span class="toc-number">3.4.</span> <span class="toc-text">安装链码包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%B9%E5%87%86%E9%93%BE%E7%A0%81%E5%AE%9A%E4%B9%89"><span class="toc-number">3.5.</span> <span class="toc-text">批准链码定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%86%E9%93%BE%E7%A0%81%E5%AE%9A%E4%B9%89%E6%8F%90%E4%BA%A4%E5%88%B0%E9%80%9A%E9%81%93"><span class="toc-number">3.6.</span> <span class="toc-text">将链码定义提交到通道</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%B0%83%E7%94%A8%E9%93%BE%E7%A0%81"><span class="toc-number">4.</span> <span class="toc-text">调用链码</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8peer-CLI%E8%B0%83%E7%94%A8%E9%93%BE%E7%A0%81"><span class="toc-number">4.1.</span> <span class="toc-text">使用peer CLI调用链码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8Fabric-Gateway%E5%AE%A2%E6%88%B7%E7%AB%AFAPI%E6%9E%84%E5%BB%BA%E7%9A%84%E7%A4%BA%E4%BE%8B%E7%A8%8B%E5%BA%8F%E6%9D%A5%E8%B0%83%E7%94%A8%E9%93%BE%E7%A0%81"><span class="toc-number">4.2.</span> <span class="toc-text">使用Fabric Gateway客户端API构建的示例程序来调用链码</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-number">4.2.1.</span> <span class="toc-text">简介</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E4%BA%9B%E7%8C%9C%E6%83%B3"><span class="toc-number">5.</span> <span class="toc-text">一些猜想</span></a></li></ol></div></div></div></div></main><footer id="footer" style="background-image: url('https://blog-1306747292.cos.ap-chongqing.myqcloud.com/cover/Hyperledger Fabirc学习笔记.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2021 - 2023 By 狛枫</div><div class="footer_custom_text"><p><a style="margin-inline:5px" target="_blank" href="https://hexo.io/zh-cn/"><img src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&logo=hexo" title="本博客由Hexo强力驱动"></a><a style="margin-inline:5px" target="_blank" href="https://butterfly.js.org/"><img src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&logo=bitdefender" title="主题采用Butterfly"></a><a style="margin-inline:5px" target="_blank" href="https://github.com/"><img src="https://img.shields.io/badge/Deploy-GitHub-d021d6?style=flat&logo=GitHub" title="本站部署于Github"></a><a style="margin-inline:5px" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&logo=Claris" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"></a><a style="margin-inline:5px" target="_blank" href="https://icp.gov.moe/?keyword=20227080"><img src="https://img.shields.io/badge/%E8%90%8CICP%E5%A4%87-20227080-fe1384?style-flat&logo=data:image/png;base64,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" title="本站已加入萌国"></a></p></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div></div></body></html>
+</li>
+<li>
+<p>Fabric引入了一种新的事务架构，执行-排序-验证，即将交易流程分为三个步骤</p>
+<ol>
+<li>执行一个交易并检查其正确性，从而给它背书</li>
+<li>通过（可插拔的）共识协议将交易排序</li>
+<li>提交交易到账本前先根据特定应用程序的背书策略验证交易</li>
+</ol>
+</li>
+<li>
+<p>Fabric目前提供了一种基于etcd库中Raft协议的CFT排序服务的实现</p>
+</li>
+<li>
+<p>Hyperledger Fabric有一个账本子系统，包括两个组件：世界状态和交易日志。在大多数情况下，链码只与账本的数据库、世界状态（例如查询）交互，而不与交易日志交互。</p>
+</li>
+</ul>
+<h1 id="更新说明">更新说明</h1>
+<h2 id="Fabric-v2-0-v2-1-v2-2">Fabric v2.0, v2.1, v2.2</h2>
+<ul>
+<li>智能合约的去中心化治理</li>
+<li>用于协作和共识的新链码应用程序模式</li>
+<li>私有数据增强</li>
+<li>外部链码启动器</li>
+<li>用于提高CouchDB性能的状态数据库缓存</li>
+</ul>
+<h2 id="Fabric-v2-3">Fabric v2.3</h2>
+<ul>
+<li>没有系统通道的排序者通道管理</li>
+<li>账本快照</li>
+</ul>
+<h2 id="Fabric-v2-4">Fabric v2.4</h2>
+<ul>
+<li>Fabric Gateway</li>
+<li>对等节点退出</li>
+<li>计算链码包ID</li>
+</ul>
+<h2 id="Fabric-v2-5">Fabric v2.5</h2>
+<ul>
+<li>清除私有数据的历史记录</li>
+<li>多架构二进制文件和Docker镜像</li>
+</ul>
+<h1 id="关键概念">关键概念</h1>
+<h2 id="Fabric网络结构">Fabric网络结构</h2>
+<h3 id="创建网络">创建网络</h3>
+<blockquote>
+<p>创建网络或通道的第一步是同意并定义其配置</p>
+</blockquote>
+<p>通道配置CC1已获得组织R1(Org1)、R2(Org1)和R0(ordererOrg)的同意，并包含在配置块中（由configtxgen工具根据configtx.yaml文件创建）。一旦存在配置块，就可以说通道在逻辑上存在，即使没有任何组件在物理上连接到它</p>
+<blockquote>
+<p>Certificate Authorities（证书颁发机构）<br>
+这些组织的定义及其管理员的身份必须由与每个组织关联的证书颁发机构(CA)创建。在我们的示例中，组织R1、R2和R0分别拥有由CA1、CA2和CA0创建的认证和组织定义。<br>
+证书颁发机构在网络中发挥着关键作用，因为它们分发可用于识别属于某个组织的组件的X.509证书<br>
+X.509证书用于客户端应用程序交易提案和智能合约交易响应，以对交易进行数字签名</p>
+</blockquote>
+<h3 id="将节点加入通道">将节点加入通道</h3>
+<blockquote>
+<p>peer节点托管账本和链码，但排序节点保存的账本副本仅包含账本的区块链部分，而不包含状态数据库</p>
+</blockquote>
+<p>R1的peer节点P1和R2的peer节点P2以及R0的排序服务O加入通道</p>
+<h3 id="安装、批准和提交链码">安装、批准和提交链码</h3>
+<blockquote>
+<p>链码安装在对等点上，然后在通道上定义和提交</p>
+</blockquote>
+<p>安装、批准和提交链代码的过程称为链代码的“生命周期”<br>
+链码定义中提供的最重要的信息是背书策略。它描述了哪些组织必须在交易被其他组织接受到其账本副本上之前对其进行背书<br>
+根据用例，可以将背书策略设置为通道中成员的任意组合。如果未设置背书策略，则继承通道配置中指定的默认背书策略<br>
+虽然可以使用peer CLI驱动交易，但最佳实践是创建一个应用程序并使用它来调用链代码上的交易</p>
+<h3 id="在通道上使用应用程序">在通道上使用应用程序</h3>
+<blockquote>
+<p>提交智能合约后，客户端应用程序可用于通过Fabric Gateway服务（网关）调用链码上的交易</p>
+</blockquote>
+<p>从Fabricv2.4开始，客户端应用程序（使用Gateway SDK）与网关服务建立gRPC连接，然后网关服务代表应用程序处理交易提议和背书过程。交易提案作为链码的输入，链码使用它来生成交易响应。</p>
+<h2 id="身份">身份</h2>
+<p>区块链网络中的不同参与者包括节点、订购者、客户端应用程序、管理员等。每个参与者都拥有封装在X.509数字证书中的数字身份。</p>
+<p>为了使身份可验证，它必须来自受信任的权威机构，MSP是定义管理该组织的有效身份的规则的组件。<br>
+Fabric中默认的MSP实现使用X.509证书作为身份，采用传统的公钥基础设施(PKI)分层模型。</p>
+<p>公钥基础设施(PKI)是在网络中提供安全通信的互联网技术的集合。PKI提供身份列表，MSP说明其中哪些是参与网络的给定组织的成员。</p>
+<ul>
+<li>PKI有四个关键要素：
+<ul>
+<li>Digital Certificates（数字证书）</li>
+<li>Public and Private Keys（公钥和私钥）</li>
+<li>Certificate Authorities（证书颁发机构）</li>
+<li>Certificate Revocation Lists（证书吊销列表）</li>
+</ul>
+</li>
+</ul>
+<p>数字证书是包含与证书持有者相关的一组属性的文档。最常见的证书类型是符合X.509标准的证书，它允许在其结构中对一方的识别详细信息进行编码。</p>
+<p>参与者或节点能够通过系统信任的机构为其颁发的数字身份来参与区块链网络。<br>
+在生产网络下，数字身份（或简称身份）具有符合X.509标准并由证书颁发机构(CA)颁发的经过加密验证的数字证书的形式。</p>
+<p>Fabric提供了内置的CA组件，允许在自己构建的区块链网络中创建CA。<br>
+该组件称为Fabric CA，是一个私有根CA提供商，能够管理具有X.509证书形式的Fabric参与者的数字身份。</p>
+<h2 id="会员服务提供商-MSP">会员服务提供商(MSP)</h2>
+<blockquote>
+<p>MSP是一种允许该身份被网络其余部分信任和识别的机制。</p>
+</blockquote>
+<p>身份类似于您的信用卡，用于证明您可以付款。MSP类似于可接受的信用卡列表。<br>
+CA用于创建身份，但就像卡的示例一样，这些身份不能只是颁发，还需要被网络识别，MSP可以将身份转变为网络可以识别的东西。<br>
+MSP也是为成员提供网络内一组角色和权限的机制。由于定义这些组织的MSP对于网络成员来说是已知的，因此可以使用它们来验证尝试执行允许其执行的操作的网络实体。</p>
+<ul>
+<li>
+<p>MSP是一种使角色参与许可的区块链网络的机制。要在Fabric网络上进行交易，成员需要：</p>
+<ul>
+<li>拥有由组织信任的CA颁发的身份。组织MSP确定组织信任哪些CA。</li>
+<li>检查组织MSP是否已添加到通道中。这意味着该组织得到了网络成员的认可和认可。</li>
+<li>确保MSP包含在网络上的策略定义中。</li>
+</ul>
+</li>
+<li>
+<p>MSP出现在区块链网络中的两个域中：</p>
+<ul>
+<li>本地在参与者的节点上（本地MSP）：本地MSP是为客户端和节点（peer和orderer）定义的。本地MSP定义节点的权限（例如，可以操作该节点的管理员）。</li>
+<li>通道配置中（通道MSP）：通道MSP在通道层面定义管理和参与权利。</li>
+</ul>
+</li>
+<li>
+<p>MSP结构</p>
+<ul>
+<li>config.yaml：用于通过启用“node OU”并定义接受的角色来配置Fabric中的身份分类功能。</li>
+<li>cacerts：此文件夹包含受此MSP代表的组织信任的根CA的自签名X.509证书列表。此MSP文件夹中必须至少有一个根CA证书。</li>
+<li>intermediatecerts：此文件夹包含该组织信任的中间CA的X.509证书列表。</li>
+<li>admincerts（从Fabricv1.4.3及更高版本中已弃用）</li>
+<li>keystore：包含节点的私钥，用于签署数据-例如签署交易提案响应，作为背书阶段的一部分。</li>
+<li>signcert：此文件夹包含CA颁发的节点证书。证书代表节点的身份，该证书对应的私钥可用于生成签名，任何拥有该证书副本的人都可以验证该签名。</li>
+<li>tlscacerts：此文件夹包含该组织信任的根CA的自签名X.509证书列表，用于使用TLS的节点之间的安全通信。TLS通信的一个示例是当对等方需要连接到排序节点以便接收账本更新时。</li>
+</ul>
+</li>
+</ul>
+<h2 id="Policies（策略）">Policies（策略）</h2>
+<blockquote>
+<p>策略是一组规则，定义了如何制定决策和实现特定结果的结构。为此，策略通常描述谁和什么，例如个人对资产的访问或权利。</p>
+</blockquote>
+<p>Fabric策略代表成员如何就接受或拒绝对网络、通道或智能合约的更改达成一致。最初配置通道时，策略由通道成员同意，但也可以随着通道的发展进行修改。简而言之，Fabric网络上执行的所有操作都由策略控制。</p>
+<p>策略允许成员决定哪些组织可以访问或更新Fabric网络，并提供执行这些决策的机制。策略包含有权访问给定资源（例如用户或系统链码）的组织列表。</p>
+<p>peer组织添加到频道的策略是在peer组织（称为Application组）的管理域内定义的。<br>
+在通道的同意者集中添加排序节点是由Orderer组内的策略控制的。<br>
+跨peer组织域和排序者组织域的操作包含在Channel组中。</p>
+<p>ACL（访问控制列表）是指应用程序通道配置中定义的策略，并将其扩展以控制其他资源。默认的Fabric ACL集在Application: &amp;ApplicationDefaults部分下的configtx.yaml文件中可见。</p>
+<p>在Hyperledger Fabric中，策略中的显式签署使用Signature语法表示，隐式签署使用ImplicitMeta语法。</p>
+<p>Signature策略定义了必须签名才能满足策略的特定用户类型，例如OR(‘Org1.peer’,‘Org2.peer’)。该语法支持AND、OR和NOutOf的任意组合。例如，可以使用AND(‘Org1.member’,‘Org2.member’)轻松表达策略，这意味着需要Org1中至少一名成员和Org2中一名成员的签名才能满足策略。</p>
+<h2 id="Peers">Peers</h2>
+<p>HyperledgerFabric区块链网络的基本元素是peer，因为它们管理账本和智能合约。从Hyperledger Fabricv2.4开始，默认情况下在每个对等点上安装并启用Fabric Gateway服务。与客户端应用程序（在Fabricv2.3及更早版本中）相反，网关服务管理对等点上的交易提议和背书。</p>
+<p>peers与orderers一起确保通道中每个节点的账本保持一致且最新。</p>
+<p>以下序列分三个阶段描述了客户端应用程序、在peer上运行的网关服务、orderer节点和其他peer之间的交互如何更新账本：</p>
+<ol>
+<li>交易提案和背书
+<ol>
+<li>交易提案：客户端应用程序通过连接到peer节点的网关服务来提交签名的交易提案</li>
+<li>事务执行：网关服务选定一个peer节点点来执行事务。选定的peer节点执行提案中指定的链码，生成提案响应，签署提案响应并将其返回给网关。</li>
+<li>交易背书：网关为链码背书策略所需的每个组织重复执行交易。网关服务收集签名的提案响应并创建一个交易信封，其返回给客户端(SDK)进行签名。</li>
+</ol>
+</li>
+<li>交易提交和排序
+<ol>
+<li>交易提交：客户端（SDK）将签名的交易信封发送到网关服务。网关将信封转发到排序节点并向客户端返回成功消息。</li>
+<li>交易排序：排序节点验证签名，排序服务对交易进行排序，并将其与其他排序交易一起打包到区块中。然后，排序服务将区块分发给通道中的所有节点，以进行验证并提交给账本。</li>
+</ol>
+</li>
+<li>交易验证和承诺
+<ol>
+<li>交易验证：每个节点都会检查交易信封上的客户端签名是否与原始交易提案上的签名相匹配。</li>
+<li>交易提交：每个节点将有序的交易块提交到通道账本。</li>
+<li>提交事件：每个提交到账本的节点都会向客户端发送一个提交状态事件以及账本更新的证明。</li>
+</ol>
+</li>
+</ol>
+<h2 id="Ledger（账本）">Ledger（账本）</h2>
+<p>Hyperledger Fabric的动机也是同样的两个问题<br>
+1. 呈现一组账本状态的当前值<br>
+2. 捕获确定这些状态的交易的历史记录</p>
+<p>在Hyperledger Fabric中，账本由两个不同但相关的部分组成 ：<br>
+1. 世界状态：一个保存一组账本状态当前值的数据库。世界状态使程序可以轻松地直接访问状态的当前值，而不必通过遍历整个事务日志来计算它。默认情况下，账本状态表示为键值对。世界状态可以经常改变，因为状态可以被创建、更新和删除。<br>
+2. 区块链：一个交易日志，记录了导致当前世界状态的所有变化。交易被收集在附加到区块链的块内，这样可以了解导致当前世界状态的变化的历史。区块链的数据结构与世界状态有很大不同，它是不可变的，一旦写入就无法修改。</p>
+<blockquote>
+<p>区块链决定世界状态，也可以说世界状态源自区块链。<br>
+世界状态是作为数据库实现的（世界状态数据库的选项目前包括LevelDB和CouchDB），区块链始终以文件的形式实现。</p>
+</blockquote>
+<p>区块的结构：</p>
+<ul>
+<li>Block Header：该部分包含三个字段，在创建块时写入：区块号、当前区块Block Data哈希、前一个区块的块头哈希</li>
+<li>Block Data：包含按顺序排列的交易列表，它是在排序服务创建块时写入的</li>
+<li>Block Metadata：包含区块创建者的证书和签名，用于网络节点验证区块</li>
+</ul>
+<p>块中交易的数据结构：</p>
+<ul>
+<li>Header：捕获有关交易的一些基本元数据，例如相关链码的名称及其版本</li>
+<li>Signature：由客户端应用程序创建的加密签名</li>
+<li>Proposal：对应用程序向智能合约提供的输入参数进行了编码</li>
+<li>Response：捕获世界状态之前和之后的值，作为读写集（RW-set）。它是智能合约的输出，如果交易成功验证，它将被应用于账本以更新世界状态。</li>
+<li>Endorsements：来自每个所需组织的签名交易响应的列表</li>
+</ul>
+<h2 id="排序服务">排序服务</h2>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://www.komaeka.fun">狛枫</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://www.komaeka.fun/posts/Hyperledger-Fabric-learning-note/">https://www.komaeka.fun/posts/Hyperledger-Fabric-learning-note/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://www.komaeka.fun" target="_blank">东方迷津筑</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/">区块链</a><a class="post-meta__tags" href="/tags/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6/">智能合约</a><a class="post-meta__tags" href="/tags/Hyperledger-Fabirc/">Hyperledger Fabirc</a></div><div class="post_share"></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/image/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">狛枫</div><div class="author-info__description">中二病永不毕业！</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">21</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">31</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://space.bilibili.com/23506251"><i></i><span>哔哩哔哩 (゜-゜)つロ 干杯~</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="mailto:komaeka@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://github.com/komaeka" target="_blank" title="GitHub"><i class="fab fa-github"></i></a><a class="social-icon" href="https://www.cnblogs.com/komaeka" target="_blank" title="博客园"><i class="fas fa-blog"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content is-expand"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#fabric-samples%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8"><span class="toc-number">1.</span> <span class="toc-text">fabric-samples的安装和使用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85fabric-samples"><span class="toc-number">1.1.</span> <span class="toc-text">安装fabric-samples</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%90%E8%A1%8Cfabric%E6%B5%8B%E8%AF%95%E7%BD%91%E7%BB%9C"><span class="toc-number">1.2.</span> <span class="toc-text">运行fabric测试网络</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%E7%BD%91%E7%BB%9C"><span class="toc-number">1.2.1.</span> <span class="toc-text">启动网络</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2%E9%93%BE%E7%A0%81"><span class="toc-number">1.2.2.</span> <span class="toc-text">部署链码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B0%83%E7%94%A8%E9%93%BE%E7%A0%81"><span class="toc-number">1.2.3.</span> <span class="toc-text">调用链码</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-number">2.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9B%B4%E6%96%B0%E8%AF%B4%E6%98%8E"><span class="toc-number">3.</span> <span class="toc-text">更新说明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Fabric-v2-0-v2-1-v2-2"><span class="toc-number">3.1.</span> <span class="toc-text">Fabric v2.0, v2.1, v2.2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Fabric-v2-3"><span class="toc-number">3.2.</span> <span class="toc-text">Fabric v2.3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Fabric-v2-4"><span class="toc-number">3.3.</span> <span class="toc-text">Fabric v2.4</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Fabric-v2-5"><span class="toc-number">3.4.</span> <span class="toc-text">Fabric v2.5</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E6%A6%82%E5%BF%B5"><span class="toc-number">4.</span> <span class="toc-text">关键概念</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Fabric%E7%BD%91%E7%BB%9C%E7%BB%93%E6%9E%84"><span class="toc-number">4.1.</span> <span class="toc-text">Fabric网络结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E7%BD%91%E7%BB%9C"><span class="toc-number">4.1.1.</span> <span class="toc-text">创建网络</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%86%E8%8A%82%E7%82%B9%E5%8A%A0%E5%85%A5%E9%80%9A%E9%81%93"><span class="toc-number">4.1.2.</span> <span class="toc-text">将节点加入通道</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E3%80%81%E6%89%B9%E5%87%86%E5%92%8C%E6%8F%90%E4%BA%A4%E9%93%BE%E7%A0%81"><span class="toc-number">4.1.3.</span> <span class="toc-text">安装、批准和提交链码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8%E9%80%9A%E9%81%93%E4%B8%8A%E4%BD%BF%E7%94%A8%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F"><span class="toc-number">4.1.4.</span> <span class="toc-text">在通道上使用应用程序</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BA%AB%E4%BB%BD"><span class="toc-number">4.2.</span> <span class="toc-text">身份</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BC%9A%E5%91%98%E6%9C%8D%E5%8A%A1%E6%8F%90%E4%BE%9B%E5%95%86-MSP"><span class="toc-number">4.3.</span> <span class="toc-text">会员服务提供商(MSP)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Policies%EF%BC%88%E7%AD%96%E7%95%A5%EF%BC%89"><span class="toc-number">4.4.</span> <span class="toc-text">Policies（策略）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Peers"><span class="toc-number">4.5.</span> <span class="toc-text">Peers</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ledger%EF%BC%88%E8%B4%A6%E6%9C%AC%EF%BC%89"><span class="toc-number">4.6.</span> <span class="toc-text">Ledger（账本）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%92%E5%BA%8F%E6%9C%8D%E5%8A%A1"><span class="toc-number">4.7.</span> <span class="toc-text">排序服务</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer" style="background-image: url('https://blog-1306747292.cos.ap-chongqing.myqcloud.com/cover/Hyperledger Fabirc学习笔记.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2021 - 2023 By 狛枫</div><div class="footer_custom_text"><p><a style="margin-inline:5px" target="_blank" href="https://hexo.io/zh-cn/"><img src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&logo=hexo" title="本博客由Hexo强力驱动"></a><a style="margin-inline:5px" target="_blank" href="https://butterfly.js.org/"><img src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&logo=bitdefender" title="主题采用Butterfly"></a><a style="margin-inline:5px" target="_blank" href="https://github.com/"><img src="https://img.shields.io/badge/Deploy-GitHub-d021d6?style=flat&logo=GitHub" title="本站部署于Github"></a><a style="margin-inline:5px" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&logo=Claris" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"></a><a style="margin-inline:5px" target="_blank" href="https://icp.gov.moe/?keyword=20227080"><img src="https://img.shields.io/badge/%E8%90%8CICP%E5%A4%87-20227080-fe1384?style-flat&logo=data:image/png;base64,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" title="本站已加入萌国"></a></p></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div></div></body></html>
